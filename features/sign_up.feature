@@ -6,7 +6,7 @@ Feature: Sign up
   Background:
     Given I am a new user
 
-    # @wip
+    @wip
   Scenario: I sign up
     When I sign up
     Then I should be signed up

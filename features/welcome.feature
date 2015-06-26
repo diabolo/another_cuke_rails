@@ -4,7 +4,6 @@ Feature: Welcome
 
   This is a placeholder just to give use a root_path and a place to start.
 
-  @wip
   Scenario: Visit site
     When I visit the site
     Then I should be welcomed
