@@ -8,7 +8,9 @@ development:
   <<: *default
   database: another_cuke_rails_development
 
-test:
+test: &test
   <<: *default
   database: another_cuke_rails_test
 
+cucumber:
+  <<: *test
