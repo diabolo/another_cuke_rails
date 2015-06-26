@@ -11,3 +11,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore database config so each dev can use their own one
+# See config/database.yml.sample
+/.config/database.yml
