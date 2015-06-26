@@ -1,0 +1,2 @@
+rvm --create use 2.2.1@another_cuke_rails 
+
