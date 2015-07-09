@@ -55,6 +55,8 @@ group :test do
 
   gem "spring-commands-cucumber"
 
+  gem 'selenium-webdriver'
+
 end
 
 gem 'slim-rails'
