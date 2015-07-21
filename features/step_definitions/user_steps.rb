@@ -12,8 +12,6 @@ module UserSH
 
     def self.make_user
       {
-        first_name: FFaker::Name.first_name,
-        last_name: FFaker::Name.last_name,
         email: valid_email,
         password: valid_password,
         confirmation: valid_password
@@ -32,6 +30,14 @@ module UserSH
 
   def create_new_user(attrs={})
     TUser.new(attrs)
+  end
+
+  def create_registered_user(attrs={})
+    # This method bypasses the UI. This makes everything much faster by avoiding
+    # repeating UI actions every time we need a registered user.
+    TUser.new(attrs).tap do |user|
+      User.create!(user.attributes.except(:confirmation))
+    end
   end
 end
 World UserSH

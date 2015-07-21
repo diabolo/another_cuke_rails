@@ -4,7 +4,6 @@ Feature: Sign in
   So I can get my personal content
 
 
-  @wip @javascript
   Scenario: Sign in
     Given I am registered
     When I sign in
